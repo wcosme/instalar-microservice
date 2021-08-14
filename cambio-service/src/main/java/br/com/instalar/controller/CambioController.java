@@ -35,7 +35,7 @@ public class CambioController {
 		BigDecimal conversionFactor = cambio.getConversionFactor();
 		BigDecimal convertedValue = conversionFactor.multiply(amount);
 		cambio.setConvertedValue(convertedValue.setScale(2, RoundingMode.CEILING));
-		cambio.setEnvironment(port);
+		cambio.setEnvironment("Cambio port: " + port + " FEIGN " + cambio.getEnvironment());
 		
 		return cambio;
 	}
