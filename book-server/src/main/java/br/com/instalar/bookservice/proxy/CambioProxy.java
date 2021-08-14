@@ -9,7 +9,7 @@ import br.com.instalar.bookservice.model.Cambio;
 @FeignClient(name = "cambio-service")
 public interface CambioProxy {
 	
-	@GetMapping(value = "/cambio-service/{amount/{from}/{to}")
+	@GetMapping(value = "/cambio-service/{amount}/{from}/{to}")
 	public Cambio getCambio(
 			@PathVariable("amount") Double amount,
 			@PathVariable("from") String from,
